@@ -1,0 +1,18 @@
+class Solution {
+    static ArrayList<Integer> leaders(int arr[]) {
+        // code here
+        ArrayList<Integer> leaders = new ArrayList<>();
+           int max = arr[arr.length-1];
+            leaders.add(arr[arr.length-1]);
+       for(int i=arr.length-2;i>=0;i--){
+           if(arr[i]>=max){
+               leaders.add(arr[i]);
+               max = arr[i];
+               
+           }
+           
+       }
+    Collections.sort(leaders,Collections.reverseOrder());
+    return leaders;
+    }
+}
