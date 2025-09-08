@@ -1,0 +1,15 @@
+class Solution {
+    int firstOccurence(String txt, String pat) {
+        // code here
+        int n = txt.length();
+        int m = pat.length();
+        int index =-1;
+        if(m>n){
+            return index;
+        }
+       else{
+        index = txt.indexOf(pat);
+       }
+       return index;
+    }
+}
