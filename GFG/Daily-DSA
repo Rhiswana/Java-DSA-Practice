@@ -1,0 +1,18 @@
+//one add string 
+class Solution {
+    // Method to find the element with odd occurrence in given array
+    int getOddOccurrence(int[] arr) {
+        // code here
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int x:arr){
+            map.put(x,map.getOrDefault(x,0)+1);
+            
+        }
+         for(HashMap.Entry<Integer,Integer> e:map.entrySet()){
+             if(e.getValue()%2!=0){
+                 return e.getKey();
+             }
+         }
+         return -1;
+    }
+}
