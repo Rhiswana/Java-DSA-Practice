@@ -16,3 +16,205 @@ class Solution {
          return -1;
     }
 }
+
+//Repeated character
+
+// User function Template for Java
+class Solution {
+    char firstRep(String S) {
+        // your code here
+        int i=0;
+        int j=i+1;
+        while( i<S.length() && j<S.length()){
+            if(S.charAt(i)==S.charAt(j)){
+                return S.charAt(i);
+            }
+            else if(S.charAt(i)!=S.charAt(j)){
+                if(j<S.length()-1){
+                j++;
+            }
+            else{
+                i++;
+                j=i+1;
+            }
+            }   
+        }
+        return '#';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
