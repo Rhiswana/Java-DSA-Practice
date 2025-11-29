@@ -42,7 +42,98 @@ class Solution {
         return '#';
     }
 }
+//Binary string starts & ends with 1
 
+  class Solution {
+    public int binarySubstring(String s) {
+        // code here
+        int count =0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                count++;
+            }
+        }
+         
+        int ans = count*(count-1)/2;
+        return ans;
+    }
+}
+
+//Remove spaces
+// User function Template for Java
+class Solution {
+
+    String modify(String s) {
+        // your code here
+        StringBuilder result = new StringBuilder();
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)!=' '){
+                result.append(s.charAt(i));
+            }
+        }
+         return result.toString();
+    }
+}
+
+//remove common char
+class Solution {
+    public static String concatenatedString(String s1, String s2) {
+        // code here
+        StringBuilder result = new StringBuilder();
+        HashSet<Character> set1 = new HashSet<>();
+        HashSet<Character> set2 = new HashSet<>();
+        for(char x:s2.toCharArray()){
+            set1.add(x);
+        }
+         for(char x:s1.toCharArray()){
+            set2.add(x);
+        }
+         for(char x:s1.toCharArray()){
+             if(!set1.contains(x)){
+                 result.append(x);
+             }
+         }
+          for(char x:s2.toCharArray()){
+             if(!set2.contains(x)){
+                 result.append(x);
+             }
+         }
+          String ans =result.toString();
+        return ans.isEmpty()?"-1":ans;
+        
+    }
+}
+
+// elements in range 
+
+// User function Template for Java
+
+class Solution {
+    boolean check_elements(int arr[], int n, int A, int B) {
+       
+        HashSet<Integer> set = new HashSet<>();
+        for(int i=A;i<=B;i++){
+            set.add(i);
+        }
+        HashSet<Integer> unique = new HashSet<>();
+        
+         int count =0;
+        for(int i=0;i<arr.length;i++){
+              unique.add(arr[i]);
+        } 
+           for(int i:unique){
+            if(set.contains(i)){
+              count++;
+              if(count==set.size()){
+                  return true;
+              }
+              
+        }
+    }
+    
+    return false;
+}
+}
 
 
 
