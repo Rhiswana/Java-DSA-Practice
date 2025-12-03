@@ -160,6 +160,25 @@ class GfG {
     }
 }
 
+// pair sum(two sum)
+class Solution {
+    boolean twoSum(int arr[], int target) {
+        // code here
+        HashSet<Integer> pair = new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            if(pair.contains(target-arr[i])){
+                return true;
+            }
+            else{
+                pair.add(arr[i]);
+            }
+        }
+        return false;
+    }
+}
+
+
+
 
 
 
